@@ -39,7 +39,7 @@ include __DIR__ . '/db/db-dischi.php';
 
                         <div class="col">
                             <div class="my-card">
-                                <img src="<?php echo $immagine ?>" alt="<?php echo "immagine di $autore" ?>">
+                                <img src="<?php echo $immagine ?>" alt="<?php echo "immagine dell'album di $autore" ?>">
                                 <div class="title"><?php echo $titolo ?></div>
                                 <div class="author"><?php echo $autore ?></div>
                                 <div class="year"><?php echo $anno ?></div>

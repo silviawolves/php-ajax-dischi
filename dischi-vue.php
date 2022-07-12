@@ -12,6 +12,9 @@
 
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -27,19 +30,19 @@
             <div class="container py-5">
                 <div class="row row-cols-5 gx-5 gy-3 mx-5 justify-content-center">
 
-                    <div class="col">
+                    <!-- CICLO CON VUE PER STAMPARE SINGOLE CARD -->
+                    <div class="col" v-for="(disco, i) in listaDischi" :key="i">
                         <div class="my-card">
-                            <img src="" alt="">
-                            <div class="title"></div>
-                            <div class="author"></div>
-                            <div class="year"></div>
+                            <img :src="disco.poster" :alt="`immagine dell'album di ${disco.author}`">
+                            <div class="title">{{ disco.title }}</div>
+                            <div class="author">{{ disco.author }}</div>
+                            <div class="year">{{ disco.year }}</div>
                         </div>
                     </div>
 
                 </div>
             </div>
         </main>
-
     </div>
 
     <!-- JS -->
